@@ -1,6 +1,5 @@
 import { Icon } from "components/Icons";
 import { NavLink } from "react-router-dom";
-
 export default function Menu() {
   return (
     <nav className="px-2">
@@ -32,6 +31,9 @@ export default function Menu() {
             <span className="transition-colors">
               <Icon name="search" size={24} />
             </span>
+            <span className="transition-colors hidden">
+              <Icon name="actsearch" />
+            </span>
             Ara
           </NavLink>
         </li>
@@ -44,6 +46,9 @@ export default function Menu() {
           >
             <span className="transition-colors">
               <Icon name="lib" size={24} />
+            </span>
+            <span className="transition-colors hidden">
+              <Icon name="actcollection" />
             </span>
             Kitaplığın
           </NavLink>
