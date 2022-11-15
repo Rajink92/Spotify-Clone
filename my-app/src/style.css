@@ -485,6 +485,9 @@ html, body, #root {
   -webkit-column-gap: 1rem;
           column-gap: 1rem;
 }
+.absolute {
+  position: absolute;
+}
 
 .overflow-y-auto {
   overflow-y: auto;
