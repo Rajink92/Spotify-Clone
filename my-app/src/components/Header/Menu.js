@@ -10,14 +10,13 @@ export default function Menu() {
             to={"/"}
             href="#"
             exact
-            className="h-10 flex items-center text-sm font-bold text-link hover:text-white px-4 gap-4"
+            className="h-10 flex items-center text-sm font-bold text-link hover:text-white px-4 gap-4 transition-colors"
           >
-            <span className="transition-colors">
-              <Icon name="home" />
-            </span>
-            <span className="transition-colors hidden">
+            {window.location.href === "http://localhost:3000/" ? (
               <Icon name="acthome" />
-            </span>
+            ) : (
+              <Icon name="home" />
+            )}
             Ana sayfa
           </NavLink>
         </li>
@@ -26,14 +25,13 @@ export default function Menu() {
             activeClassName="!text-white"
             to={"/search"}
             href="#"
-            className="h-10 flex items-center text-sm font-bold text-link hover:text-white px-4 gap-4"
+            className="h-10 flex items-center text-sm font-bold text-link hover:text-white px-4 gap-4 transition-colors"
           >
-            <span className="transition-colors">
-              <Icon name="search" size={24} />
-            </span>
-            <span className="transition-colors hidden">
+            {window.location.href === "http://localhost:3000/search" ? (
               <Icon name="actsearch" />
-            </span>
+            ) : (
+              <Icon name="search" />
+            )}
             Ara
           </NavLink>
         </li>
@@ -42,14 +40,13 @@ export default function Menu() {
             activeClassName="!text-white"
             to={"/collection"}
             href="#"
-            className="h-10 flex items-center text-sm font-bold text-link hover:text-white px-4 gap-4"
+            className="h-10 flex items-center text-sm font-bold text-link hover:text-white px-4 gap-4 transition-colors"
           >
-            <span className="transition-colors">
-              <Icon name="lib" size={24} />
-            </span>
-            <span className="transition-colors hidden">
+            {window.location.href === "http://localhost:3000/collection" ? (
               <Icon name="actcollection" />
-            </span>
+            ) : (
+              <Icon name="lib" />
+            )}
             Kitaplığın
           </NavLink>
         </li>
